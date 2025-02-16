@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="login-container">
+      <h1>Système de Gestion</h1>
+      <h2>Nedjm Froid</h2>
+      <p>Connectez-vous pour accéder au système</p>
+
+      <div class="info">
+        <p>Email: caissier@nedjm.com</p>
+        <p>Password: password123</p>
+        <p>ID: MOUNDIR</p>
+      </div>
+
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Mot de passe" required />
+        <button type="submit">Se connecter</button>
+      </form>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display: none">
+      <div class="top-bar">
+        <span>Système de Gestion Banque - EURL Nedjm Froid</span>
+        <div>
+          <span>Tableau de bord</span>
+          <span>Paramètres</span>
+          <span>Déconnexion</span>
+        </div>
+      </div>
+      <h1>Gestion Banque BEA, HMD</h1>
+      
+
+      <table>
+        <thead>
+          <tr>
+            <th>DATE NPC</th>
+            <th>DATE RELEV</th>
+            <th>N°PC</th>
+            <th>N°PROFORMA</th>
+            <th>N°FACTURE</th>
+            <th>LIBELLÉ</th>
+            <th>DÉBIT</th>
+            <th>CRÉDIT</th>
+            <th>FR/BAN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" id="dateNpc" placeholder="Entrer DATE NPC" /></td>
+            <td><input type="text" id="dateRelev" placeholder="Entrer DATE RELEV" /></td>
+            <td id="npcCell">
+              <select id="npc">
+                <option value="">Choisir Type</option>
+                <option value="VIREMENT">N°VIREMENT</option>
+                <option value="CHEQUE">N°CHEQUE</option>
+              </select>
+            </td>
+            <td><input type="text" id="nProforma" placeholder="Entrer N°PROFORMA" /></td>
+            <td><input type="text" id="nFacture" placeholder="Entrer N°FACTURE" /></td>
+            <td><input type="text" id="libelle" placeholder="Entrer LIBELLÉ" /></td>
+            <td><input type="text" id="debit" placeholder="Entrer DÉBIT" /></td>
+            <td><input type="text" id="credit" placeholder="Entrer CRÉDIT" /></td>
+            <td><input type="text" id="frBan" placeholder="Entrer FR/BAN" /></td>
+          </tr>
+        </tbody>
+      </table>
+        <button id="save-button">Enregistrer</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Opération N°</th>
+            <th>DATE NPC</th>
+            <th>DATE RELEV</th>
+            <th>N°PC</th>
+            <th>N°PROFORMA</th>
+            <th>N°FACTURE</th>
+            <th>LIBELLÉ</th>
+            <th>DÉBIT</th>
+            <th>CRÉDIT</th>
+            <th>FR/BAN</th>
+            <th>Modifier</th>
+          </tr>
+        </thead>
+        <tbody id="data-table-body">
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
